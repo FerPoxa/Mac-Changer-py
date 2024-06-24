@@ -15,5 +15,5 @@ def change_mac():
         mac = input("Enter your spoofed mac")
         os.system('powershell Set-NetAdapter -Name "'+interface+'" -MacAddress "'+mac+'"')
     elif platform.system() == "Linux":
-        os.system("sudo ip link set dev "+interface+" address "+"mac")
+        os.system("sudo ip link set dev "+interface+" address "+mac)
     print ("Mac changed to: "+mac)
